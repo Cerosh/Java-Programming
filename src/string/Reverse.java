@@ -6,8 +6,8 @@ public class Reverse {
 		String s = "Reverse this String";
 		StringBuffer sBuffer = new StringBuffer(s);
 		StringBuilder sBuild = new StringBuilder(s);
-		String reverse = "";
 		// Reverse using the loop
+		String reverse = "";
 		int len = s.length();
 		for (int i = len - 1; i >= 0; i--) {
 			reverse = reverse + s.charAt(i);
