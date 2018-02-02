@@ -1,0 +1,60 @@
+package collection;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+
+public class arrayList {
+	String name = "Rithu";
+	int age = 6;
+
+	public void methodOne(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public static void main(String args[]) {
+		ArrayList aL1 = new ArrayList();
+		System.out.println("Check Size before first Opertation: " + aL1.size());
+		aL1.add("First Element");
+		aL1.add(3);
+		aL1.add(12.2);
+		aL1.add('a');
+		System.out.println("Size Check after addition:" + aL1.size());
+		System.out.println("-----------------");
+		aL1.remove(0);
+		System.out.println("Size Check after removal: " + aL1.size());
+		System.out.println("-----------------");
+		System.out.println("Out put of the contains(): " + aL1.contains(12.2));
+		System.out.println("-----------------");
+		ArrayList<String> aL2 = new ArrayList<String>();
+		aL2.add("Cerosh");
+		aL2.add("Simi");
+		aL2.add("ARohan");
+		aL1.addAll(aL2);
+		Collections.sort(aL2);
+		for (int i = 0; i < aL2.size(); i++) {
+			System.out.println("Display through For Loop after Sorting: " + aL2.get(i));
+		}
+		System.out.println("-----------------");
+		Iterator it = aL1.iterator();
+		while (it.hasNext()) {
+			System.out.println("Display through Iterator: " + it.next());
+
+		}
+		System.out.println("-----------------");
+		arrayList al12 = new arrayList();
+		al12.methodOne("Ammu", 7);
+		ArrayList al3 = new ArrayList();
+		al3.add(al12);
+		System.out.println("Size check after Object addition: " + al3.size());
+		System.out.println("-----------------");
+		aL1.addAll(al3);
+		System.out.println("Size check afte addAll(): " + aL1.size());
+		System.out.println("-----------------");
+		aL1.removeAll(aL2);
+		System.out.println("Size check after removeAll(): " + aL1.size());
+
+	}
+
+}
